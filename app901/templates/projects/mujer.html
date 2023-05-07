@@ -1,0 +1,125 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<center><h2 style="color:rgb(255, 0, 179);">Prendas de Mujeres</h2></center>
+<center>
+<h2>Warner</h2>
+<table>
+    <tr>
+        <th>SKU</th>
+        <th>DISEÑO</th>
+        <th>TALLA</th>
+        <th>COLOR</th>
+
+    </tr>
+    <tr>
+        <td>Harry Potter</td>
+        <td>Playera</td>
+        <td>Mediana</td>
+        <td>Blanco</td>
+        <td><a href="#">Comprar</a></td>
+    </tr>
+    <tr>
+        <td>Godzilla</td>
+        <td>Playera</td>
+        <td>Mediana</td>
+        <td>Blanco</td>
+        <td><a href="#">Comprar</a></td>
+    </tr>
+    <tr>
+        <td>El Conjuro</td>
+        <td>Playera</td>
+        <td>Mediana</td>
+        <td>Blanco</td>
+        <td><a href="#">Comprar</a></td>
+    </tr>
+</table>
+<h2>Universal</h2>
+<table>
+    <tr>
+        <th>SKU</th>
+        <th>DISEÑO</th>
+        <th>TALLA</th>
+        <th>COLOR</th>
+
+    </tr>
+    <tr>
+        <td>ElGrinch</td>
+        <td>Playera</td>
+        <td>Mediana</td>
+        <td>Blanco</td>
+        <td><a href="#">Comprar</a></td>
+    </tr>
+    <tr>
+        <td>JurasicPark</td>
+        <td>Playera</td>
+        <td>Mediana</td>
+        <td>Blanco</td>
+        <td><a href="#">Comprar</a></td>
+    </tr>
+    <tr>
+        <td>FastAndFurious</td>
+        <td>Playera</td>
+        <td>Mediana</td>
+        <td>Blanco</td>
+        <td><a href="#">Comprar</a></td>
+    </tr>
+</table>
+<h2>Disney</h2>
+<table>
+    <tr>
+        <th>SKU</th>
+        <th>DISEÑO</th>
+        <th>TALLA</th>
+        <th>COLOR</th>
+
+    </tr>
+    <tr>
+        <td>ToyStory</td>
+        <td>Playera</td>
+        <td>Mediana</td>
+        <td>Blanco</td>
+        <td><a href="#">Comprar</a></td>
+    </tr>
+    <tr>
+        <td>Marvel</td>
+        <td>Playera</td>
+        <td>Mediana</td>
+        <td>Blanco</td>
+        <td><a href="#">Comprar</a></td>
+    </tr>
+    <tr>
+        <td>Intensamente</td>
+        <td>Playera</td>
+        <td>Mediana</td>
+        <td>Blanco</td>
+        <td><a href="#">Comprar</a></td>
+    </tr>
+</table>
+<hr>
+<center><h2 style="color:red;">Inventario</h2></center>
+<hr>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>projects</th>
+        <th>votes</th>
+        <th></th>
+        <th>Fecha de Creacion</th>
+    </tr>
+    {% for hombre in projects %}
+    <tr>
+        <td>{{hombre.id}}</td>
+        <td>{{hombre.title}}</td>
+        <td>{{hombre.vote_total}}</td>
+        <td>{{hombre.vote_radio}}</td>
+        <td>{{hombre.created}}</td>
+        <td><a href="/project/{{hombre.id}}">View -</a></td>
+        <td><a href="{% url 'update-project' hombre.id %}">editar -</a></td>
+        <td><a href="{% url 'delete-project' hombre.id %}">eliminar</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</center>
+{% endblock content %} 

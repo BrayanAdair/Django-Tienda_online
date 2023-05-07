@@ -1,0 +1,16 @@
+{% extends 'main.html'%}
+
+{% block content %}
+<center>
+<h1>Producto:</h1>
+<hr>
+<img style="max-width: 200px;" src="{{project.featured_image.url}}">
+<h2 style="color:blue;">{{project.title}}</h2>
+{% for tag in tags %}
+<span style="border: 1px solid green;"></span>
+{% endfor %}
+
+<b style="color:blue;">{{project.descripcion}}</b>
+<hr>
+</center>
+{% endblock %}

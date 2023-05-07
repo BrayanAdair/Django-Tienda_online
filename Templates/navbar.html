@@ -1,0 +1,87 @@
+{% load static %}
+<!-- Header Section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- UIkit CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.15/dist/css/uikit.min.css" /> -->
+    
+    <!-- UIkit JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.15/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.15/dist/js/uikit-icons.min.js"></script> -->
+    
+    
+  </head>
+<body>
+
+<header class="header uk-navbar-container uk-navbar-container uk-navbar-transparent">
+    <div class="container container--narrow ">
+      <a href="" class="header__logo">
+        <!--<img src="{% static 'image/gato.png' %}" alt="logo gato" style="max-width:100px;"/>-->
+        <a href="{% url 'create-project' %}">
+      </a>
+      <nav class="header__nav uk-navbar-container contenedor_navbar ">
+        
+        <ul class="header__menu  ">
+          <li class="header__menuItem"><a href="index.html">Developers</a></li>
+          <li class="header__menuItem  "><a href="projects.html">Projects</a></li>
+          <li class="header__menuItem "><a href="inbox.html">Inbox</a></li>
+          <li class="header__menuItem "><a href="account.html">My Account</a></li>
+          <li class="header__menuItem "><a href="{% url 'create-project' %}" style="font-size:10px;" class="btn btn--sub">Agregar Producto </a></li>
+          <li class="header__menuItem "><a href="login.html" class="btn btn--sub" style="font-size:10px;">Login/Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <center><h1 style="color:blueviolet;">Prendas "ElBrayan"</h1></center>
+    <h4>
+        <center><b>La mejor tienda de ropa adaptada a tus gustos solo en prendas "ElBrayan"</b></center>
+      </h4>
+<hr>
+
+
+    
+    <hr>
+    <style type="text/css"> 
+    
+    header{
+      position: absolute;
+      width: 100%;
+      
+      top: 0px;
+      background-color: rgba(0, 0, 0, 0.826) !important;
+    }
+    body{
+      margin-top: 100px;
+    }
+    .header__menu{
+      display: flex;
+      padding: 20px;
+      margin: 0 50px;
+      justify-content:flex-end;
+      
+    }
+    .header__menuItem{
+      margin-right: 15px;
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      color: blueviolet;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    a:hover{
+      color:darkcyan;
+
+    }
+    
+    </style>
+  </body>
+    
+    </html>
